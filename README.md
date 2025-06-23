@@ -26,9 +26,15 @@ Once the characters of plate is obtained and model is trained, the model is load
 
 ## Setup
 
+python version **required** 3.9.13
+
 Clone the repository.
 
-Change the path of the image/video file in DetectPlate.py
+Install https://tesseract-ocr.github.io/tessdoc/Installation.html
+
+Add enviroment variable for tesseract
+
+Change the path of the image file in DetectPlate.py
 
 Create virtual env. On windows you could do something like: py -m venv env
 
