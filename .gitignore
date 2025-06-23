@@ -1,0 +1,63 @@
+# Entornos virtuales
+venv/
+env/
+.venv/
+.env/
+
+# Archivos de configuración de IDEs
+.idea/
+.vscode/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Salidas del proyecto
+output/
+build/
+dist/
+*.egg-info/
+
+# Archivos de logs
+*.log
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración de Jupyter
+.ipynb_checkpoints/
+
+# Archivos de cobertura de pruebas
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Archivos de pytest
+.pytest_cache/
+
+# Archivos de Tox
+.tox/
+
+# Configuración de mypy
+.mypy_cache/
+
+# Configuración de Pylint
+.pylint.d/
+
+# Archivos de profiling
+profile.*
+
+# Configuración de Tesseract (si genera datos)
+tessdata/
+
+# Archivos personales
+*.bak
+*.swp
+*.swo
