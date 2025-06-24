@@ -8,7 +8,7 @@ import cv2
 import numpy as np
 
 # Imagen de entrada
-image_path = './img/car7.jpg'
+image_path = './img/car11.jpg'
 car_image = imread(image_path, as_gray=True)
 
 # car_image = imutils.rotate(car_image, 270)  # si necesitas rotarla
