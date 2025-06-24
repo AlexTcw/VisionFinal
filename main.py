@@ -2,7 +2,7 @@ import psycopg2
 from PredictCharacters import recognize_license_plate
 
 # Datos de conexión |
-DB_HOST = '192.168.1.77'
+DB_HOST = 'alextcwserver.ddns.net'
 DB_PORT = '5432'
 DB_NAME = 'vision_db'
 DB_USER = 'alextcw'
@@ -48,4 +48,4 @@ def buscar_placa_en_db(texto_placa):
 if __name__ == "__main__":
     texto_placa = recognize_license_plate(MODEL_PATH)
     print(f"Texto reconocido de la placa: {texto_placa}")
-    #buscar_placa_en_db(texto_placa)
+    buscar_placa_en_db(texto_placa)

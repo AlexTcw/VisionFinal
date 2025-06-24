@@ -17,15 +17,8 @@ def read_training_data(training_directory):
     for each_letter in letters:
         for each in range(10):
             image_path = os.path.join(training_directory, each_letter, each_letter + '_' + str(each) + '.jpg')
-            # read each image of each character
             img_details = imread(image_path, as_gray=True)
-            # converts each character image to binary image
             binary_image = img_details < threshold_otsu(img_details)
-            # the 2D array of each image is flattened because the machine learning
-            # classifier requires that each sample is a 1D array
-            # therefore the 20*20 image becomes 1*400
-            # in machine learning terms that's 400 features with each pixel
-            # representing a feature
             flat_bin_image = binary_image.reshape(-1)
             image_data.append(flat_bin_image)
             target_data.append(each_letter)
@@ -33,11 +26,6 @@ def read_training_data(training_directory):
     return (np.array(image_data), np.array(target_data))
 
 def cross_validation(model, num_of_fold, train_data, train_label):
-    # this uses the concept of cross validation to measure the accuracy
-    # of a model, the num_of_fold determines the type of validation
-    # e.g if num_of_fold is 4, then we are performing a 4-fold cross validation
-    # it will divide the dataset into 4 and use 1/4 of it for testing
-    # and the remaining 3/4 for the training
     accuracy_result = cross_val_score(model, train_data, train_label,
                                       cv=num_of_fold)
     print("Cross Validation Result for ", str(num_of_fold), " -fold")
